@@ -9,7 +9,7 @@ We will use several npm package to achieve this :
 - [MUI framework 5.0.6](https://mui.com/) which provides material UI components
 - [SASS 1.43.4](https://github.com/sass/dart-sass) to allow to use and import scss files
 
-[UI screenshot]
+![screenshot](resources/screenshot.png)
 
 The main UI component will consume a service named File.js which will provide the contents of a specifided folder path :
 ```javascript
@@ -20,21 +20,19 @@ export function getFolderContent(path) {
 
 ## Test results
 ### Bundle size
-| Framework | OS | Total size of generated folder  | Main executable size |
+| Framework | OS | Bundle size (installer)  | Main executable size |
 |--|--|--|--|
-| Electron  15.3.0 | Windows 11 | 330 MB | 137 MB|
-| Tauri X.X.X | Windows 11 | XXX MB | XXX MB|
+| Electron  15.3.0 | Windows 11 | 83 MB | 137 MB|
+| Tauri 1.0.0-beta.10 | Windows 11 | 7MB | 4MB |
 
 ### Memory consumption
-| Framework | OS | RAM used  |
-|--|--|--|
-| Electron  15.3.0 | Windows 11 | XXX MB | 
-| Tauri X.X.X | Windows 11 | XXX MB | 
+| Framework | OS | Number of processes | Total RAM used  |
+|--|--|--|--|
+| Electron  15.3.0 | Windows 11 |4| 138 MB | 
+| Tauri 1.0.0-beta.10 | Windows 11 |8| 110 MB | 
 
-### Executable first launch speed after build
-| Framework | OS | Launch speed | 
-|--|--|--|
-| Electron  15.3.0 | Windows 11 | XXX ms | 
-| Tauri X.X.X | Windows 11 | XXX ms | 
-
-
+### Executable launch speed 
+| Framework | OS | First launch after build | Second launch | 
+|--|--|--|--|
+| Electron  15.3.0 | Windows 11 | 9940 ms | 1420 ms | 
+| Tauri 1.0.0-beta.10 | Windows 11 | 1230 ms | 1120 ms | 
