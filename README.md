@@ -9,7 +9,7 @@ We will use several npm package to achieve this :
 - [MUI framework 5.0.6](https://mui.com/) which provides material UI components
 - [SASS 1.43.4](https://github.com/sass/dart-sass) to allow to use and import scss files
 
-[UI screenshot]
+![screenshot](resources/screenshot.png)
 
 The main UI component will consume a service named File.js which will provide the contents of a specifided folder path :
 ```javascript
@@ -36,5 +36,3 @@ export function getFolderContent(path) {
 |--|--|--|
 | Electron  15.3.0 | Windows 11 | XXX ms | 
 | Tauri X.X.X | Windows 11 | XXX ms | 
-
-
