@@ -22,17 +22,23 @@ export function getFolderContent(path) {
 ### Bundle size
 | Framework | OS | Bundle size (installer)  | Main executable size |
 |--|--|--|--|
-| Electron  15.3.0 | Windows 11 | 83 MB | 137 MB|
-| Tauri 1.0.0-beta.10 | Windows 11 | 7MB | 4MB |
+| Electron  15.3.0 | Windows 11 x64 | 83 MB | 137 MB|
+| Tauri 1.0.0-beta.10 | Windows 11 x64 | 7MB | 4MB |
+| Electron  15.3.0 | Linux x64 | 114 MB (deb) | 134 MB|
+| Tauri 1.0.0-beta.10 | Linux x64 | 6.5 MB (deb) | 16 MB |
 
 ### Memory consumption
 | Framework | OS | Number of processes | Total RAM used  |
 |--|--|--|--|
 | Electron  15.3.0 | Windows 11 |4| 138 MB | 
 | Tauri 1.0.0-beta.10 | Windows 11 |8| 110 MB | 
+| Electron  15.3.0 | Linux x64 | 18 | 224 MB|
+| Tauri 1.0.0-beta.10 | Linux x64 | 1 | 23 MB |
 
 ### Executable launch speed 
 | Framework | OS | First launch after build | Second launch | 
 |--|--|--|--|
 | Electron  15.3.0 | Windows 11 | 9940 ms | 1420 ms | 
 | Tauri 1.0.0-beta.10 | Windows 11 | 1230 ms | 1120 ms | 
+| Electron  15.3.0 | Linux x64 | 2570 ms | 1910 ms|
+| Tauri 1.0.0-beta.10 | Linux x64 | 1560 ms | 1130 ms |
