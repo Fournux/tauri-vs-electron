@@ -1,0 +1,8 @@
+.App {
+  .header {
+    display: flex;
+    > svg {
+      cursor: pointer;
+    }
+  }
+}
