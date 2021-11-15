@@ -53,3 +53,13 @@ The two projects share the exact same react components, only the implementation 
 As we can see, the tauri bundle is up to 19 times smaller than the electron one. This can be explained by the fact that tauri uses the web browser provided by the operating system, while electron embed chromium in its bundle.
 
 The memory usage is also up to 9 times higher with electron. Tauri uses a rust backend, which is way ligther and faster than the node.js runtime used by Electron and embedded in the bundle. Morever, electron launches several javascript instances at the same time, which increases also the memory usage.
+
+Since electron provides access to the entire node.JS API, developers will have access to everything they need to develop their application using only JavaScript. In contrast, the tauri API is much less complete and fleshed out than Node.JS, which will mean developing the missing functionality in Rust. The development team must know how to develop in Rust if the need is particularly specific.
+
+Example: fs.readDir() allows to access only the name and absolute path of files in a folder. If you want to have more information about the files (permissions, creation date...) you will have to develop the rust function which will return this information.
+
+## Conclusion
+
+Although Tauri allows to get a lighter and faster binary than Electron, the features offered by the API are very basic and you will probably have to develop in Rust the missing features. The fact that tauri uses the browser embedded by the operating system implies that you have to make the application compatible with multiple browsers (Edge, safari..).
+
+Moreover, tauri is currently still in beta testing, and should not be used for large-scale projects in production mode.
